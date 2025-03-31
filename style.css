@@ -430,3 +430,193 @@ footer {
 footer p {
   text-align: center;
 }
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.projects-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.projects-row .details-container {
+  width: 48%;
+}
+
+/* For mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .projects-row {
+    flex-direction: column;
+  }
+  
+  .projects-row .details-container {
+    width: 100%;
+  }
+}
+
+#youtube {
+  padding: 6rem 5% 4rem;
+  text-align: center;
+}
+
+.youtube-description {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.youtube-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.youtube-card {
+  width: 30%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.youtube-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.video-thumbnail {
+  position: relative;
+  display: block;
+  height: 180px;
+  overflow: hidden;
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: rgba(255,0,0,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.video-content {
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.channel-link {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.channel-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 auto;
+  width: 165px;
+}
+
+.channel-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Articles Section */
+#articles {
+  padding: 6rem 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.articles-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  position: relative;
+  height: 300px;
+}
+
+/* Article Cards */
+.article-card {
+  width: 100%;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px; /* Added border radius */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+}
+
+.article-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Swipe Button */
+.article-btn {
+  background: #ff9800;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.article-btn:hover {
+  background: #e68900;
+}
+
+/* Swipe Animation */
+.article-card.active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
