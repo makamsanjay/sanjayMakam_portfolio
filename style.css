@@ -620,3 +620,15 @@ footer p {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
+
+.projects-row, .figma-projects-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.details-container-figma {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
